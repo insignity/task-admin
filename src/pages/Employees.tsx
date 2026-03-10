@@ -1,6 +1,7 @@
 import { supabase } from "../supabase"
 import { useEffect, useState } from "react"
 import EmployeeItem from "../components/EmployeeItem"
+import AddEmployee from "../components/AddEmployee"
 
 export default function Employees() {
 
@@ -27,17 +28,6 @@ export default function Employees() {
             setLoading(false)
 
         }
-    }
-
-    async function addEmployee() {
-        const { error } = await supabase.from("employees").insert({ name, role })
-
-        if (error) {
-            console.log("ERROR:", error)
-        } else {
-            loadEmployees()
-        }
-
     }
 
     async function updateEmployee(id: string) {
@@ -84,6 +74,9 @@ export default function Employees() {
                         deleteEmployee={deleteEmployee}
                     />
                 ))}
+            <AddEmployee loadEmployees={loadEmployees} />
+
+
 
         </div>
     )

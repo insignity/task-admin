@@ -3,7 +3,7 @@ type Props = {
     editingId: string | null
     name: string
     role: string
-    setName: (v: string) => void
+    setName: (v: string) => void // returns void like (){}
     setRole: (v: string) => void
     setEditingId: (v: string | null) => void
     updateEmployee: (id: string) => void
