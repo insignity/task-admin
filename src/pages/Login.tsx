@@ -19,6 +19,8 @@ export default function Login() {
     return (
         <div>
             <h2>Login</h2>
+            <h3>admin@test.com</h3>
+            <h3>123456</h3>
 
             <input placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />

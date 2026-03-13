@@ -12,7 +12,7 @@ export default function AddEmployee({
 }: Props) {
 
     const [name, setName] = useState("")
-    const [isErrorHidden, setIsErrorHidden] = useState(false)
+    const [isErrorHidden, setIsErrorHidden] = useState(true)
     const [role, setRole] = useState("")
 
     async function addEmployee() {
